@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ImageView">
+        <!--  load bitmap from uri(string type) -->
+        <attr name="url" format="string" />
+        <attr name="imgCorner" format="integer" />
+        <attr name="imgCornerTopLeft" format="boolean" />
+        <attr name="imgCornerTopRight" format="boolean" />
+        <attr name="imgCornerBottomLeft" format="boolean" />
+        <attr name="imgCornerBottomRight" format="boolean" />
+        <attr name="placeholderRes" format="reference|color" />
+        <attr name="errorRes" format="reference|color" />
+        <attr name="isCircle" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="RecyclerView" parent="AdapterView">
+        <attr name="lineManager" format="reference" />
+        <attr name="itemBinding" format="reference" />
+        <attr name="layoutManager" format="reference" />
+        <attr name="itemAnimator" format="reference" />
+        <attr name="onScrollChangeCommand" format="reference" />
+        <attr name="onScrollStateChangedCommand" format="reference" />
+    </declare-styleable>
+
+</resources>

@@ -8,9 +8,11 @@ import android.database.Cursor
 import android.net.ConnectivityManager
 import android.net.Uri
 import androidx.lifecycle.ProcessLifecycleOwner
+import com.blankj.utilcode.util.Utils
 import me.hgj.jetpackmvvm.ext.lifecycle.KtxAppLifeObserver
 import me.hgj.jetpackmvvm.ext.lifecycle.KtxLifeCycleCallBack
 import me.hgj.jetpackmvvm.network.manager.NetworkStateReceive
+import me.hgj.jetpackmvvm.util.GlideEngine
 
 /**
  * 作者　: hegaojian
@@ -45,6 +47,8 @@ class Ktx : ContentProvider() {
 
         if (watchActivityLife) application.registerActivityLifecycleCallbacks(KtxLifeCycleCallBack())
         if (watchAppLife) ProcessLifecycleOwner.get().lifecycle.addObserver(KtxAppLifeObserver)
+        Utils.init(appContext)
+
     }
 
 

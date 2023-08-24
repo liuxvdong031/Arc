@@ -62,4 +62,6 @@ dependencies {
     api 'me.tatarka.bindingcollectionadapter2:bindingcollectionadapter-viewpager2:4.0.0'
     //glide
     api 'com.github.bumptech.glide:glide:4.11.0'
+    //util
+    api 'com.blankj:utilcodex:1.31.1'
 }
