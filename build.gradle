@@ -8,6 +8,7 @@ buildscript {
         maven {
             url 'https://jitpack.io'
         }
+        mavenCentral()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.1.1'
@@ -24,6 +25,7 @@ allprojects {
         maven {
             url 'https://jitpack.io'
         }
+        mavenCentral()
     }
     //配置这个
     tasks.withType(Javadoc) {
