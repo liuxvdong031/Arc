@@ -15,6 +15,12 @@
             android:id="@+id/include_toolbar"
             layout="@layout/include_toolbar" />
 
+        <Button
+            android:id="@+id/tv_test"
+            android:text="测试"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
         <include
             android:id="@+id/include_list"
             layout="@layout/include_list" />

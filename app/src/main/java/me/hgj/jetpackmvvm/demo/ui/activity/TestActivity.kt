@@ -8,8 +8,10 @@ import me.hgj.jetpackmvvm.base.viewmodel.BaseViewModel
 import me.hgj.jetpackmvvm.demo.R
 import me.hgj.jetpackmvvm.demo.app.base.BaseActivity
 import me.hgj.jetpackmvvm.demo.app.ext.showMessage
+import me.hgj.jetpackmvvm.demo.bean.TestBean
 import me.hgj.jetpackmvvm.demo.databinding.ActivityTestBinding
 import me.hgj.jetpackmvvm.demo.ui.adapter.TestAdapter
+import me.hgj.jetpackmvvm.demo.viewmodel.TestViewModel
 import me.hgj.jetpackmvvm.demo.viewmodel.request.RequestLoginRegisterViewModel
 import me.hgj.jetpackmvvm.ext.parseState
 import me.hgj.jetpackmvvm.ext.util.logd
@@ -22,6 +24,7 @@ import me.hgj.jetpackmvvm.ext.util.logd
 class TestActivity : BaseActivity<BaseViewModel, ActivityTestBinding>() {
 
     val viewModel: RequestLoginRegisterViewModel by viewModels()
+    val testViewModel: TestViewModel by viewModels()
 
     val adapter: TestAdapter by lazy { TestAdapter(arrayListOf()) }
 
@@ -37,6 +40,9 @@ class TestActivity : BaseActivity<BaseViewModel, ActivityTestBinding>() {
             }
         }
 
+        val testBean = TestBean("https://static.runoob.com/images/demo/demo2.jpg","测试数据")
+        mDatabind.bean = testBean
+        mDatabind.viewModel = testViewModel
     }
 
     override fun createObserver() {

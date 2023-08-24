@@ -1,5 +1,6 @@
 package me.hgj.jetpackmvvm.demo.ui.fragment.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.fragment.app.viewModels
@@ -9,6 +10,7 @@ import com.blankj.utilcode.util.ConvertUtils
 import com.kingja.loadsir.core.LoadService
 import com.yanzhenjie.recyclerview.SwipeRecyclerView
 import com.zhpan.bannerview.BannerViewPager
+import kotlinx.android.synthetic.main.fragment_home.tv_test
 import kotlinx.android.synthetic.main.include_list.*
 import kotlinx.android.synthetic.main.include_recyclerview.*
 import kotlinx.android.synthetic.main.include_toolbar.*
@@ -25,6 +27,7 @@ import me.hgj.jetpackmvvm.demo.app.weight.recyclerview.SpaceItemDecoration
 import me.hgj.jetpackmvvm.demo.data.model.bean.BannerResponse
 import me.hgj.jetpackmvvm.demo.data.model.bean.CollectBus
 import me.hgj.jetpackmvvm.demo.databinding.FragmentHomeBinding
+import me.hgj.jetpackmvvm.demo.ui.activity.TestActivity
 import me.hgj.jetpackmvvm.demo.ui.adapter.AriticleAdapter
 import me.hgj.jetpackmvvm.demo.viewmodel.request.RequestCollectViewModel
 import me.hgj.jetpackmvvm.demo.viewmodel.request.RequestHomeViewModel
@@ -56,6 +59,11 @@ class HomeFragment : BaseFragment1<HomeViewModel, FragmentHomeBinding>() {
     private val requestHomeViewModel: RequestHomeViewModel by viewModels()
 
     override fun initView(savedInstanceState: Bundle?) {
+
+        tv_test.setOnClickListener{
+            startActivity(Intent(mActivity,TestActivity::class.java))
+        }
+
         //状态页配置
         loadsir = loadServiceInit(mViewBind.includeList.includeRecyclerview.swipeRefresh) {
             //点击重试时触发的操作
