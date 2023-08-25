@@ -1,7 +1,9 @@
 package me.hgj.jetpackmvvm.demo.app.base
 
 import android.os.Bundle
+import android.view.View
 import androidx.databinding.ViewDataBinding
+import com.blankj.utilcode.util.ClickUtils
 import me.hgj.jetpackmvvm.base.activity.BaseVmDbActivity
 import me.hgj.jetpackmvvm.base.viewmodel.BaseViewModel
 import me.hgj.jetpackmvvm.demo.app.ext.dismissLoadingExt
@@ -37,11 +39,15 @@ abstract class BaseActivity<VM : BaseViewModel, DB : ViewDataBinding> : BaseVmDb
         dismissLoadingExt()
     }
 
-   /* *//**
-     * 在任何情况下本来适配正常的布局突然出现适配失效，适配异常等问题，只要重写 Activity 的 getResources() 方法
-     *//*
-    override fun getResources(): Resources {
-        AutoSizeCompat.autoConvertDensityOfGlobal(super.getResources())
-        return super.getResources()
-    }*/
+    fun antiShakeClick(view: View, onClickListener: View.OnClickListener) {
+        ClickUtils.applySingleDebouncing(view, onClickListener)
+    }
+
+//    /**
+//     * 在任何情况下本来适配正常的布局突然出现适配失效，适配异常等问题，只要重写 Activity 的 getResources() 方法
+//     */
+//    override fun getResources(): Resources {
+//        AutoSizeCompat.autoConvertDensityOfGlobal(super.getResources())
+//        return super.getResources()
+//    }
 }

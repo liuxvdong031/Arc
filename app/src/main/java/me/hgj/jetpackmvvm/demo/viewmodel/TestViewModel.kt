@@ -30,7 +30,7 @@ class TestViewModel : BaseViewModel() {
         ItemBinding.of(BR.viewModel, R.layout.item_todo)
 
     val error: ItemBinding<MultiItemViewModel<BaseViewModel>> =
-        ItemBinding.of { itemBinding, position, item ->
+        ItemBinding.of { itemBinding, _, item ->
             run {
                 when (item.itemType) {
                     MultiItemViewModel.TYPE_ITEM -> {
@@ -39,15 +39,11 @@ class TestViewModel : BaseViewModel() {
                             R.layout.item_text
                         )
                     }
-
                     MultiItemViewModel.TYPE_HEAD -> {
                         itemBinding.set(
                             BR.viewModel,
                             R.layout.item_todo
                         )
-                    }
-
-                    else -> {
                     }
                 }
             }
@@ -57,7 +53,7 @@ class TestViewModel : BaseViewModel() {
         addItemTest()
     }
 
-    fun addItemTest() {
+    private fun addItemTest() {
         for (i in 1..10) {
             val viewModel = ItemTestViewModel(this)
             if (i % 2 == 0) {
