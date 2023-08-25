@@ -9,7 +9,6 @@ import com.blankj.utilcode.util.ClickUtils;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.BindingAdapter;
-import me.hgj.jetpackmvvm.binding.command.BindingCommand;
 
 
 public class ViewAdapter {
@@ -43,43 +42,11 @@ public class ViewAdapter {
     }
 
 
-    /**
-     * requireAll 是意思是是否需要绑定全部参数, false为否
-     * View的onClick事件绑定
-     * onClickCommand 绑定的命令,
-     * isThrottleFirst 是否开启防止过快点击
-     */
-    @BindingAdapter(value = {"onClickCommand"}, requireAll = false)
-    public static void onClickCommand(View view, final BindingCommand bindingCommand) {
-        ClickUtils.applySingleDebouncing(view,CLICK_INTERVAL,click -> {
-            if (bindingCommand != null) {
-                bindingCommand.execute();
-            }
-        });
+    @BindingAdapter({"android:onClick"})
+    public static void setOnClick(View view, final View.OnClickListener clickListener) {
+        ClickUtils.applySingleDebouncing(view,CLICK_INTERVAL,clickListener);
     }
 
-
-    /**
-     * 回调控件本身
-     *
-     * @param currentView
-     * @param bindingCommand
-     */
-    @BindingAdapter(value = {"onClickCommandView"}, requireAll = false)
-    public static void onClickCommandView(View currentView, BindingCommand bindingCommand) {
-        ClickUtils.applySingleDebouncing(currentView,CLICK_INTERVAL,clickView -> {
-            if (bindingCommand != null) {
-                bindingCommand.execute(clickView);
-            }
-        });
-    }
-
-    @BindingAdapter(value = {"currentView"}, requireAll = false)
-    public static void replyCurrentView(View currentView, BindingCommand bindingCommand) {
-        if (bindingCommand != null) {
-            bindingCommand.execute(currentView);
-        }
-    }
     /**
      * view是否需要获取焦点
      */
@@ -93,20 +60,6 @@ public class ViewAdapter {
         }
     }
 
-    /**
-     * view的焦点发生变化的事件绑定
-     */
-    @BindingAdapter({"onFocusChangeCommand"})
-    public static void onFocusChangeCommand(View view, final BindingCommand<Boolean> onFocusChangeCommand) {
-        view.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if (onFocusChangeCommand != null) {
-                    onFocusChangeCommand.execute(hasFocus);
-                }
-            }
-        });
-    }
 
     /**
      * view的显示隐藏

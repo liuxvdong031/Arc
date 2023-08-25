@@ -78,7 +78,8 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.2'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.2'
     implementation 'com.android.support:multidex:1.0.3'
-    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.4'
+    //leakcanary
+//    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.4'
     //androidx UI
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'

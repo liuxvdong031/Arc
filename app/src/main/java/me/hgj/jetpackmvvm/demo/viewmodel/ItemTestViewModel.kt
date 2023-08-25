@@ -1,5 +1,6 @@
 package me.hgj.jetpackmvvm.demo.viewmodel
 
+import android.view.View
 import androidx.databinding.ObservableField
 import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.ToastUtils

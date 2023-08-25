@@ -25,39 +25,40 @@ class TestViewModel : BaseViewModel() {
     var errorDetailsBinding: ItemBinding<ItemTestViewModel> =
         ItemBinding.of(BR.viewModel, R.layout.item_todo)
 
-    val error:ItemBinding<MultiItemViewModel<BaseViewModel>> = ItemBinding.of { itemBinding, position, item ->
-        run {
-            when (item.itemType) {
-                MultiItemViewModel.TYPE_ITEM -> {
-                    itemBinding.set(
-                        BR.viewModel,
-                        R.layout.item_text
-                    )
-                }
+    val error: ItemBinding<MultiItemViewModel<BaseViewModel>> =
+        ItemBinding.of { itemBinding, position, item ->
+            run {
+                when (item.itemType) {
+                    MultiItemViewModel.TYPE_ITEM -> {
+                        itemBinding.set(
+                            BR.viewModel,
+                            R.layout.item_text
+                        )
+                    }
 
-                MultiItemViewModel.TYPE_HEAD -> {
-                    itemBinding.set(
-                        BR.viewModel,
-                        R.layout.item_todo
-                    )
-                }
+                    MultiItemViewModel.TYPE_HEAD -> {
+                        itemBinding.set(
+                            BR.viewModel,
+                            R.layout.item_todo
+                        )
+                    }
 
-                else -> {
+                    else -> {
+                    }
                 }
             }
         }
-    }
 
     init {
         addItemTest()
     }
 
-    fun addItemTest(){
-        for (i in 1..10){
+    fun addItemTest() {
+        for (i in 1..10) {
             val viewModel = ItemTestViewModel(this)
-            if (i %2 == 0){
+            if (i % 2 == 0) {
                 viewModel.itemType = MultiItemViewModel.TYPE_ITEM
-            }else {
+            } else {
                 viewModel.itemType = MultiItemViewModel.TYPE_HEAD
             }
             errorDetailsList.add(viewModel)

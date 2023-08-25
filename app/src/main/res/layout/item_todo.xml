@@ -83,8 +83,7 @@
                         android:background="@drawable/item_imgselector"
                         android:paddingTop="16dp"
                         android:paddingBottom="16dp"
-                        android:src="@drawable/ic_more"
-                        android:onClick="@{()->viewModel.onItemClick()}"/>
+                        android:src="@drawable/ic_more" />
                 </LinearLayout>
 
                 <View
