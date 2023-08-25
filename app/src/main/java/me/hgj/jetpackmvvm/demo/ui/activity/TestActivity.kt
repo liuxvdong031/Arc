@@ -1,8 +1,10 @@
 package me.hgj.jetpackmvvm.demo.ui.activity
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
+import com.blankj.utilcode.util.LogUtils
 import kotlinx.android.synthetic.main.activity_test.*
 import me.hgj.jetpackmvvm.base.viewmodel.BaseViewModel
 import me.hgj.jetpackmvvm.demo.R
@@ -21,33 +23,26 @@ import me.hgj.jetpackmvvm.ext.util.logd
  * @date   : 2020/8/26
  */
 
-class TestActivity : BaseActivity<BaseViewModel, ActivityTestBinding>() {
+class TestActivity : BaseActivity<TestViewModel, ActivityTestBinding>() {
 
     val viewModel: RequestLoginRegisterViewModel by viewModels()
-    val testViewModel: TestViewModel by viewModels()
-
-    val adapter: TestAdapter by lazy { TestAdapter(arrayListOf()) }
-
 
     override fun initView(savedInstanceState: Bundle?) {
-
         //强烈注意：使用addLoadingObserve 将非绑定当前activity的viewmodel绑定loading回调 防止出现请求时不显示 loading 弹窗bug
         addLoadingObserve(viewModel)
-
-        adapter.run {
-            clickAction = { position, item, state ->
-                "海王收到了点击事件，并准备发一个红包".logd()
-            }
-        }
-
         val testBean = TestBean("https://static.runoob.com/images/demo/demo2.jpg","测试数据")
         mDatabind.bean = testBean
-        mDatabind.viewModel = testViewModel
+        mDatabind.viewModel = mViewModel
     }
 
     override fun createObserver() {
 
-
     }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        LogUtils.d("resultCode = $resultCode  ")
+    }
+
 }
 

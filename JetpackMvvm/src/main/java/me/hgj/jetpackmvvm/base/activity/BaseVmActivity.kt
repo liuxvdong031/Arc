@@ -1,5 +1,6 @@
 package me.hgj.jetpackmvvm.base.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -77,6 +78,17 @@ abstract class BaseVmActivity<VM : BaseViewModel> : AppCompatActivity() {
         mViewModel.loadingChange.dismissDialog.observeInActivity(this, Observer {
             dismissLoading()
         })
+        //打开Activity
+        mViewModel.activityChange.startActivity.observeInActivity(this) {
+            startActivity(it)
+        }
+        //打开Activity带返回结果
+        mViewModel.activityChange.startActivityFroResult.observeInActivity(this) {
+            startActivityForResult(it)
+        }
+        mViewModel.activityChange.finishActivity.observeInActivity(this){
+            finish()
+        }
     }
 
     /**
@@ -94,6 +106,24 @@ abstract class BaseVmActivity<VM : BaseViewModel> : AppCompatActivity() {
                 dismissLoading()
             })
         }
+    }
+
+    private fun startActivity(map: MutableMap<String, Any>) {
+        val clz = map[BaseViewModel.CLASS] as Class<*>
+        val bundle = map[BaseViewModel.BUNDLE] as Bundle
+        val intent = Intent(this, clz)
+        intent.putExtras(bundle)
+        startActivity(intent)
+    }
+
+    private fun startActivityForResult(map: MutableMap<String, Any>) {
+        val clz = map[BaseViewModel.CLASS] as Class<*>
+        val bundle = map[BaseViewModel.BUNDLE] as Bundle
+        val resultCode = map[BaseViewModel.RESULT_CODE] as Int
+        val intent = Intent(this, clz)
+        bundle.putInt(BaseViewModel.RESULT_CODE,resultCode)
+        intent.putExtras(bundle)
+        startActivityForResult(intent,resultCode)
     }
 
     /**

@@ -8,6 +8,7 @@ import android.database.Cursor
 import android.net.ConnectivityManager
 import android.net.Uri
 import androidx.lifecycle.ProcessLifecycleOwner
+import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.Utils
 import me.hgj.jetpackmvvm.ext.lifecycle.KtxAppLifeObserver
 import me.hgj.jetpackmvvm.ext.lifecycle.KtxLifeCycleCallBack
@@ -48,7 +49,8 @@ class Ktx : ContentProvider() {
         if (watchActivityLife) application.registerActivityLifecycleCallbacks(KtxLifeCycleCallBack())
         if (watchAppLife) ProcessLifecycleOwner.get().lifecycle.addObserver(KtxAppLifeObserver)
         Utils.init(appContext)
-
+        val config = LogUtils.getConfig()
+        config.globalTag = "LxdTest"
     }
 
 

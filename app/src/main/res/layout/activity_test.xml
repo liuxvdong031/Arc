@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="bean"
             type="me.hgj.jetpackmvvm.demo.bean.TestBean" />
@@ -12,7 +13,7 @@
             name="viewModel"
             type="me.hgj.jetpackmvvm.demo.viewmodel.TestViewModel" />
 
-        <import type="me.hgj.jetpackmvvm.binding.LayoutManagers"/>
+        <import type="me.hgj.jetpackmvvm.binding.LayoutManagers" />
 
     </data>
 
@@ -21,30 +22,37 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Button"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{()->viewModel.onclickStartActivity()}"
+                android:text="启动1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{()->viewModel.onclickStartActivityForResult()}"
+                android:text="启动2" />
+        </LinearLayout>
 
         <ImageView
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:scaleType="fitXY"
-            app:url="@{bean.url}"
             app:imgCorner="@{10}"
+            app:imgCornerBottomRight="@{true}"
             app:imgCornerTopRight="@{true}"
-            app:imgCornerBottomRight="@{true}"/>
+            app:url="@{bean.url}" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:itemBinding="@{viewModel.error}"
             app:items="@{viewModel.errorDetailsList}"
-            app:layoutManager="@{LayoutManagers.linear()}"/>
+            app:layoutManager="@{LayoutManagers.linear()}" />
     </LinearLayout>
 </layout>

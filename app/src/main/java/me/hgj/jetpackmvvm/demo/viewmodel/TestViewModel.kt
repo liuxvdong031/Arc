@@ -1,5 +1,8 @@
 package me.hgj.jetpackmvvm.demo.viewmodel
 
+import android.os.Bundle
+import android.os.Debug
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.databinding.ObservableArrayList
 import androidx.databinding.ObservableList
 import com.blankj.utilcode.util.ToastUtils
@@ -8,6 +11,7 @@ import me.hgj.jetpackmvvm.base.viewmodel.MultiItemViewModel
 import me.hgj.jetpackmvvm.demo.BR
 import me.hgj.jetpackmvvm.demo.R
 import me.hgj.jetpackmvvm.demo.bean.TestBean
+import me.hgj.jetpackmvvm.demo.ui.activity.DebugActivity
 import me.tatarka.bindingcollectionadapter2.ItemBinding
 
 /**
@@ -64,5 +68,13 @@ class TestViewModel : BaseViewModel() {
             errorDetailsList.add(viewModel)
         }
 
+    }
+
+    fun onclickStartActivity(){
+        startActivity(DebugActivity::class.java, Bundle())
+    }
+
+    fun onclickStartActivityForResult(){
+        startActivityFroResult(DebugActivity::class.java, Bundle(),100)
     }
 }
