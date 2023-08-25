@@ -32,17 +32,4 @@ public class ViewAdapter {
     public static void setItemAnimator(RecyclerView recyclerView, RecyclerView.ItemAnimator animator) {
         recyclerView.setItemAnimator(animator);
     }
-
-
-    public static class ScrollDataWrapper {
-        public float scrollX;
-        public float scrollY;
-        public int state;
-
-        public ScrollDataWrapper(float scrollX, float scrollY, int state) {
-            this.scrollX = scrollX;
-            this.scrollY = scrollY;
-            this.state = state;
-        }
-    }
 }

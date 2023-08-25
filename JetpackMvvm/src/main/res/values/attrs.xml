@@ -2,20 +2,10 @@
 <resources>
 
     <declare-styleable name="View">
-        <!-- require BindingCommand {@link com.kelin.mvvmlight.command.BindingCommand } to deal with view click event. -->
-        <attr name="onClickCommand" format="reference" />
-        <attr name="onClickCommandView" format="reference"  />
-        <attr name="onLongClickCommand" format="reference"  />
-        <!-- require BindingCommand<Boolean> {@link com.kelin.mvvmlight.command.BindingCommand } to deal with view focus change event.
-         BindingCommand would has params which means if view hasFocus.-->
-        <attr name="onFocusChangeCommand" format="reference"  />
-        <!-- require BindingCommand<MotionEvent> -->
         <attr name="isVisible" format="boolean"  />
-
     </declare-styleable>
 
     <declare-styleable name="ImageView">
-        <!--  load bitmap from uri(string type) -->
         <attr name="url" format="string" />
         <attr name="imgCorner" format="integer" />
         <attr name="imgCornerTopLeft" format="boolean" />
@@ -32,8 +22,6 @@
         <attr name="itemBinding" format="reference" />
         <attr name="layoutManager" format="reference" />
         <attr name="itemAnimator" format="reference" />
-        <attr name="onScrollChangeCommand" format="reference" />
-        <attr name="onScrollStateChangedCommand" format="reference" />
     </declare-styleable>
 
 </resources>
