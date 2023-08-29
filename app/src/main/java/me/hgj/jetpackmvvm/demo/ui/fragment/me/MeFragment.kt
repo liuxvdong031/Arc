@@ -15,8 +15,8 @@ import me.hgj.jetpackmvvm.demo.app.ext.setUiTheme
 import me.hgj.jetpackmvvm.demo.data.model.bean.BannerResponse
 import me.hgj.jetpackmvvm.demo.data.model.bean.IntegralResponse
 import me.hgj.jetpackmvvm.demo.databinding.FragmentMeBinding
-import me.hgj.jetpackmvvm.demo.viewmodel.request.RequestMeViewModel
-import me.hgj.jetpackmvvm.demo.viewmodel.state.MeViewModel
+import me.hgj.jetpackmvvm.demo.vm.request.RequestMeViewModel
+import me.hgj.jetpackmvvm.demo.vm.state.MeViewModel
 import me.hgj.jetpackmvvm.ext.nav
 import me.hgj.jetpackmvvm.ext.navigateAction
 import me.hgj.jetpackmvvm.ext.parseState

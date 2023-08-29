@@ -5,13 +5,12 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import com.kingja.loadsir.core.LoadService
 import kotlinx.android.synthetic.main.include_viewpager.*
-import me.hgj.jetpackmvvm.demo.R
 import me.hgj.jetpackmvvm.demo.app.appViewModel
 import me.hgj.jetpackmvvm.demo.app.base.BaseFragment
 import me.hgj.jetpackmvvm.demo.app.ext.*
 import me.hgj.jetpackmvvm.demo.app.weight.loadCallBack.ErrorCallback
 import me.hgj.jetpackmvvm.demo.databinding.FragmentViewpagerBinding
-import me.hgj.jetpackmvvm.demo.viewmodel.request.RequestPublicNumberViewModel
+import me.hgj.jetpackmvvm.demo.vm.request.RequestPublicNumberViewModel
 import me.hgj.jetpackmvvm.ext.parseState
 
 /**

@@ -11,9 +11,7 @@ import me.hgj.jetpackmvvm.demo.app.ext.initMain
 import me.hgj.jetpackmvvm.demo.app.ext.interceptLongClick
 import me.hgj.jetpackmvvm.demo.app.ext.setUiTheme
 import me.hgj.jetpackmvvm.demo.databinding.FragmentMainBinding
-import me.hgj.jetpackmvvm.demo.viewmodel.state.MainViewModel
-import me.hgj.jetpackmvvm.ext.nav
-import me.hgj.jetpackmvvm.ext.util.loge
+import me.hgj.jetpackmvvm.demo.vm.state.MainViewModel
 
 /**
  * 时间　: 2019/12/27

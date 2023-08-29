@@ -8,7 +8,7 @@
 
         <variable
             name="vm"
-            type="me.hgj.jetpackmvvm.demo.viewmodel.state.MeViewModel" />
+            type="me.hgj.jetpackmvvm.demo.vm.state.MeViewModel" />
 
         <variable
             name="click"

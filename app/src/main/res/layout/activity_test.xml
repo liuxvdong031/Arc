@@ -11,7 +11,7 @@
 
         <variable
             name="viewModel"
-            type="me.hgj.jetpackmvvm.demo.viewmodel.TestViewModel" />
+            type="me.hgj.jetpackmvvm.demo.vm.TestViewModel" />
 
         <import type="me.hgj.jetpackmvvm.binding.LayoutManagers" />
 

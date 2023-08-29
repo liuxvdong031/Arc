@@ -1,6 +1,7 @@
 package me.hgj.jetpackmvvm.demo.app.network
 
 import me.hgj.jetpackmvvm.demo.data.model.bean.*
+import me.hgj.jetpackmvvm.network.BaseResponse
 import okhttp3.ResponseBody
 import retrofit2.Response
 import retrofit2.http.*
@@ -14,8 +15,14 @@ interface ApiService {
 
     companion object {
         const val SERVER_URL = "https://wanandroid.com/"
-        const val SERVER_URL1 = "https://wanandroid.com/"
+        const val SERVER_URL2 = "http://192.168.1.141:18081/"
     }
+
+    @GET("app/hello")
+    suspend fun getHello(): ApiResponse<String>
+
+    @POST("app/post")
+    suspend fun postHello(@Body baseResponse: String): ApiResponse<String>
 
     /**
      * 登录

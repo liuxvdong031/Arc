@@ -14,7 +14,7 @@ import me.hgj.jetpackmvvm.demo.app.ext.*
 import me.hgj.jetpackmvvm.demo.app.weight.recyclerview.SpaceItemDecoration
 import me.hgj.jetpackmvvm.demo.databinding.IncludeListBinding
 import me.hgj.jetpackmvvm.demo.ui.adapter.CollectUrlAdapter
-import me.hgj.jetpackmvvm.demo.viewmodel.request.RequestCollectViewModel
+import me.hgj.jetpackmvvm.demo.vm.request.RequestCollectViewModel
 import me.hgj.jetpackmvvm.ext.nav
 import me.hgj.jetpackmvvm.ext.navigateAction
 

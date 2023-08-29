@@ -6,7 +6,6 @@ import android.widget.FrameLayout
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.include_toolbar.*
 import kotlinx.android.synthetic.main.include_viewpager.*
-import me.hgj.jetpackmvvm.demo.R
 import me.hgj.jetpackmvvm.demo.app.appViewModel
 import me.hgj.jetpackmvvm.demo.app.base.BaseFragment
 import me.hgj.jetpackmvvm.demo.app.ext.bindViewPager2
@@ -14,7 +13,7 @@ import me.hgj.jetpackmvvm.demo.app.ext.init
 import me.hgj.jetpackmvvm.demo.app.ext.initClose
 import me.hgj.jetpackmvvm.demo.data.model.bean.SystemResponse
 import me.hgj.jetpackmvvm.demo.databinding.FragmentSystemBinding
-import me.hgj.jetpackmvvm.demo.viewmodel.state.TreeViewModel
+import me.hgj.jetpackmvvm.demo.vm.state.TreeViewModel
 import me.hgj.jetpackmvvm.ext.nav
 
 /**

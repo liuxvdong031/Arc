@@ -11,12 +11,8 @@ import com.kingja.loadsir.core.LoadService
 import com.yanzhenjie.recyclerview.SwipeRecyclerView
 import com.zhpan.bannerview.BannerViewPager
 import kotlinx.android.synthetic.main.fragment_home.tv_test
-import kotlinx.android.synthetic.main.include_list.*
-import kotlinx.android.synthetic.main.include_recyclerview.*
-import kotlinx.android.synthetic.main.include_toolbar.*
 import me.hgj.jetpackmvvm.demo.R
 import me.hgj.jetpackmvvm.demo.app.appViewModel
-import me.hgj.jetpackmvvm.demo.app.base.BaseFragment
 import me.hgj.jetpackmvvm.demo.app.base.BaseFragment1
 import me.hgj.jetpackmvvm.demo.app.eventViewModel
 import me.hgj.jetpackmvvm.demo.app.ext.*
@@ -29,9 +25,9 @@ import me.hgj.jetpackmvvm.demo.data.model.bean.CollectBus
 import me.hgj.jetpackmvvm.demo.databinding.FragmentHomeBinding
 import me.hgj.jetpackmvvm.demo.ui.activity.TestActivity
 import me.hgj.jetpackmvvm.demo.ui.adapter.AriticleAdapter
-import me.hgj.jetpackmvvm.demo.viewmodel.request.RequestCollectViewModel
-import me.hgj.jetpackmvvm.demo.viewmodel.request.RequestHomeViewModel
-import me.hgj.jetpackmvvm.demo.viewmodel.state.HomeViewModel
+import me.hgj.jetpackmvvm.demo.vm.request.RequestCollectViewModel
+import me.hgj.jetpackmvvm.demo.vm.request.RequestHomeViewModel
+import me.hgj.jetpackmvvm.demo.vm.state.HomeViewModel
 import me.hgj.jetpackmvvm.ext.nav
 import me.hgj.jetpackmvvm.ext.navigateAction
 import me.hgj.jetpackmvvm.ext.parseState

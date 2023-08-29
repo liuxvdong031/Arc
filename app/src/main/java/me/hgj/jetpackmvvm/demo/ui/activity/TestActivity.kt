@@ -3,20 +3,13 @@ package me.hgj.jetpackmvvm.demo.ui.activity
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
-import androidx.lifecycle.Observer
 import com.blankj.utilcode.util.LogUtils
-import kotlinx.android.synthetic.main.activity_test.*
-import me.hgj.jetpackmvvm.base.viewmodel.BaseViewModel
-import me.hgj.jetpackmvvm.demo.R
 import me.hgj.jetpackmvvm.demo.app.base.BaseActivity
-import me.hgj.jetpackmvvm.demo.app.ext.showMessage
+import me.hgj.jetpackmvvm.demo.app.network.apiService
 import me.hgj.jetpackmvvm.demo.bean.TestBean
 import me.hgj.jetpackmvvm.demo.databinding.ActivityTestBinding
-import me.hgj.jetpackmvvm.demo.ui.adapter.TestAdapter
-import me.hgj.jetpackmvvm.demo.viewmodel.TestViewModel
-import me.hgj.jetpackmvvm.demo.viewmodel.request.RequestLoginRegisterViewModel
-import me.hgj.jetpackmvvm.ext.parseState
-import me.hgj.jetpackmvvm.ext.util.logd
+import me.hgj.jetpackmvvm.demo.vm.TestViewModel
+import me.hgj.jetpackmvvm.demo.vm.request.RequestLoginRegisterViewModel
 
 /**
  * @author : hgj
@@ -33,6 +26,7 @@ class TestActivity : BaseActivity<TestViewModel, ActivityTestBinding>() {
         val testBean = TestBean("https://static.runoob.com/images/demo/demo2.jpg","测试数据")
         mDatabind.bean = testBean
         mDatabind.viewModel = mViewModel
+        apiService
     }
 
     override fun createObserver() {

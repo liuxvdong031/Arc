@@ -17,8 +17,8 @@ import me.hgj.jetpackmvvm.demo.app.ext.*
 import me.hgj.jetpackmvvm.demo.app.weight.recyclerview.SpaceItemDecoration
 import me.hgj.jetpackmvvm.demo.databinding.FragmentListBinding
 import me.hgj.jetpackmvvm.demo.ui.adapter.ShareAdapter
-import me.hgj.jetpackmvvm.demo.viewmodel.request.RequestAriticleViewModel
-import me.hgj.jetpackmvvm.demo.viewmodel.state.AriticleViewModel
+import me.hgj.jetpackmvvm.demo.vm.request.RequestAriticleViewModel
+import me.hgj.jetpackmvvm.demo.vm.state.AriticleViewModel
 import me.hgj.jetpackmvvm.ext.nav
 import me.hgj.jetpackmvvm.ext.navigateAction
 

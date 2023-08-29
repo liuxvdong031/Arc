@@ -26,8 +26,8 @@ import me.hgj.jetpackmvvm.demo.app.util.CacheUtil
 import me.hgj.jetpackmvvm.demo.data.model.bean.*
 import me.hgj.jetpackmvvm.demo.data.model.enums.CollectType
 import me.hgj.jetpackmvvm.demo.databinding.FragmentWebBinding
-import me.hgj.jetpackmvvm.demo.viewmodel.request.RequestCollectViewModel
-import me.hgj.jetpackmvvm.demo.viewmodel.state.WebViewModel
+import me.hgj.jetpackmvvm.demo.vm.request.RequestCollectViewModel
+import me.hgj.jetpackmvvm.demo.vm.state.WebViewModel
 import me.hgj.jetpackmvvm.ext.nav
 
 

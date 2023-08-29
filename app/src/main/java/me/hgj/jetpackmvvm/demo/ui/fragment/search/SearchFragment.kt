@@ -28,8 +28,8 @@ import me.hgj.jetpackmvvm.demo.app.util.SettingUtil
 import me.hgj.jetpackmvvm.demo.databinding.FragmentSearchBinding
 import me.hgj.jetpackmvvm.demo.ui.adapter.SearcHistoryAdapter
 import me.hgj.jetpackmvvm.demo.ui.adapter.SearcHotAdapter
-import me.hgj.jetpackmvvm.demo.viewmodel.request.RequestSearchViewModel
-import me.hgj.jetpackmvvm.demo.viewmodel.state.SearchViewModel
+import me.hgj.jetpackmvvm.demo.vm.request.RequestSearchViewModel
+import me.hgj.jetpackmvvm.demo.vm.state.SearchViewModel
 import me.hgj.jetpackmvvm.ext.nav
 import me.hgj.jetpackmvvm.ext.navigateAction
 import me.hgj.jetpackmvvm.ext.parseState

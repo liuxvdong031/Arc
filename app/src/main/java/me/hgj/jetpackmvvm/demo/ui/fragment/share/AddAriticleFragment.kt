@@ -19,8 +19,8 @@ import me.hgj.jetpackmvvm.demo.app.ext.initClose
 import me.hgj.jetpackmvvm.demo.app.ext.showMessage
 import me.hgj.jetpackmvvm.demo.app.util.SettingUtil
 import me.hgj.jetpackmvvm.demo.databinding.FragmentShareAriticleBinding
-import me.hgj.jetpackmvvm.demo.viewmodel.request.RequestAriticleViewModel
-import me.hgj.jetpackmvvm.demo.viewmodel.state.AriticleViewModel
+import me.hgj.jetpackmvvm.demo.vm.request.RequestAriticleViewModel
+import me.hgj.jetpackmvvm.demo.vm.state.AriticleViewModel
 import me.hgj.jetpackmvvm.ext.nav
 import me.hgj.jetpackmvvm.ext.parseState
 import me.hgj.jetpackmvvm.ext.view.clickNoRepeat

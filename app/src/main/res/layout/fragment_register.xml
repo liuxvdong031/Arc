@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewmodel"
-            type="me.hgj.jetpackmvvm.demo.viewmodel.state.LoginRegisterViewModel" />
+            type="me.hgj.jetpackmvvm.demo.vm.state.LoginRegisterViewModel" />
         <variable
             name="click"
             type="me.hgj.jetpackmvvm.demo.ui.fragment.login.RegisterFrgment.ProxyClick" />

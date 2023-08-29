@@ -4,9 +4,8 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_collect.*
 import kotlinx.android.synthetic.main.include_toolbar.*
-import me.hgj.jetpackmvvm.demo.R
 import me.hgj.jetpackmvvm.demo.app.appViewModel
-import me.hgj.jetpackmvvm.demo.viewmodel.request.RequestCollectViewModel
+import me.hgj.jetpackmvvm.demo.vm.request.RequestCollectViewModel
 import me.hgj.jetpackmvvm.demo.app.base.BaseFragment
 import me.hgj.jetpackmvvm.demo.app.ext.bindViewPager2
 import me.hgj.jetpackmvvm.demo.app.ext.init

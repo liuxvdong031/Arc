@@ -14,8 +14,8 @@ import me.hgj.jetpackmvvm.demo.app.ext.showMessage
 import me.hgj.jetpackmvvm.demo.app.util.CacheUtil
 import me.hgj.jetpackmvvm.demo.app.util.SettingUtil
 import me.hgj.jetpackmvvm.demo.databinding.FragmentRegisterBinding
-import me.hgj.jetpackmvvm.demo.viewmodel.request.RequestLoginRegisterViewModel
-import me.hgj.jetpackmvvm.demo.viewmodel.state.LoginRegisterViewModel
+import me.hgj.jetpackmvvm.demo.vm.request.RequestLoginRegisterViewModel
+import me.hgj.jetpackmvvm.demo.vm.state.LoginRegisterViewModel
 import me.hgj.jetpackmvvm.ext.nav
 import me.hgj.jetpackmvvm.ext.navigateAction
 import me.hgj.jetpackmvvm.ext.parseState

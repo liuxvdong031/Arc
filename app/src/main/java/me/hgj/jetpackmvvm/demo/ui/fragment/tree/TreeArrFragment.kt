@@ -12,7 +12,7 @@ import me.hgj.jetpackmvvm.demo.app.ext.init
 import me.hgj.jetpackmvvm.demo.app.ext.setUiTheme
 import me.hgj.jetpackmvvm.demo.app.util.CacheUtil
 import me.hgj.jetpackmvvm.demo.databinding.FragmentViewpagerBinding
-import me.hgj.jetpackmvvm.demo.viewmodel.state.TreeViewModel
+import me.hgj.jetpackmvvm.demo.vm.state.TreeViewModel
 import me.hgj.jetpackmvvm.ext.nav
 import me.hgj.jetpackmvvm.ext.navigateAction
 

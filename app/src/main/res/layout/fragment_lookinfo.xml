@@ -7,7 +7,7 @@
     <data>
         <variable
             name="vm"
-            type="me.hgj.jetpackmvvm.demo.viewmodel.state.LookInfoViewModel" />
+            type="me.hgj.jetpackmvvm.demo.vm.state.LookInfoViewModel" />
     </data>
 
     <LinearLayout

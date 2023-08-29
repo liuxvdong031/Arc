@@ -20,9 +20,9 @@ import me.hgj.jetpackmvvm.demo.app.weight.recyclerview.SpaceItemDecoration
 import me.hgj.jetpackmvvm.demo.data.model.bean.CollectBus
 import me.hgj.jetpackmvvm.demo.databinding.FragmentListBinding
 import me.hgj.jetpackmvvm.demo.ui.adapter.AriticleAdapter
-import me.hgj.jetpackmvvm.demo.viewmodel.request.RequestCollectViewModel
-import me.hgj.jetpackmvvm.demo.viewmodel.request.RequestSearchViewModel
-import me.hgj.jetpackmvvm.demo.viewmodel.state.SearchViewModel
+import me.hgj.jetpackmvvm.demo.vm.request.RequestCollectViewModel
+import me.hgj.jetpackmvvm.demo.vm.request.RequestSearchViewModel
+import me.hgj.jetpackmvvm.demo.vm.state.SearchViewModel
 import me.hgj.jetpackmvvm.ext.nav
 import me.hgj.jetpackmvvm.ext.navigateAction
 import me.hgj.jetpackmvvm.ext.parseState

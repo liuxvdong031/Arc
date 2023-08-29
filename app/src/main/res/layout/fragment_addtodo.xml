@@ -6,7 +6,7 @@
 
         <variable
             name="vm"
-            type="me.hgj.jetpackmvvm.demo.viewmodel.state.TodoViewModel" />
+            type="me.hgj.jetpackmvvm.demo.vm.state.TodoViewModel" />
 
         <variable
             name="click"

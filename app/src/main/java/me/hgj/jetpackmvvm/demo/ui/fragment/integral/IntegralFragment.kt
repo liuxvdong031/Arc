@@ -20,8 +20,8 @@ import me.hgj.jetpackmvvm.demo.data.model.bean.BannerResponse
 import me.hgj.jetpackmvvm.demo.data.model.bean.IntegralResponse
 import me.hgj.jetpackmvvm.demo.databinding.FragmentIntegralBinding
 import me.hgj.jetpackmvvm.demo.ui.adapter.IntegralAdapter
-import me.hgj.jetpackmvvm.demo.viewmodel.request.RequestIntegralViewModel
-import me.hgj.jetpackmvvm.demo.viewmodel.state.IntegralViewModel
+import me.hgj.jetpackmvvm.demo.vm.request.RequestIntegralViewModel
+import me.hgj.jetpackmvvm.demo.vm.state.IntegralViewModel
 import me.hgj.jetpackmvvm.ext.nav
 import me.hgj.jetpackmvvm.ext.navigateAction
 import me.hgj.jetpackmvvm.ext.util.notNull

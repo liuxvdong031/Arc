@@ -11,11 +11,10 @@ import com.blankj.utilcode.util.ToastUtils
 import com.tencent.bugly.beta.Beta
 import me.hgj.jetpackmvvm.demo.R
 import me.hgj.jetpackmvvm.demo.app.appViewModel
-import me.hgj.jetpackmvvm.demo.app.base.BaseActivity
 import me.hgj.jetpackmvvm.demo.app.base.BaseActivity1
 import me.hgj.jetpackmvvm.demo.app.util.StatusBarUtil
 import me.hgj.jetpackmvvm.demo.databinding.ActivityMainBinding
-import me.hgj.jetpackmvvm.demo.viewmodel.state.MainViewModel
+import me.hgj.jetpackmvvm.demo.vm.state.MainViewModel
 import me.hgj.jetpackmvvm.network.manager.NetState
 
 /**

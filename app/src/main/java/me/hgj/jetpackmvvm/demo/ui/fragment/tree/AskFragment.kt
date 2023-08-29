@@ -19,9 +19,9 @@ import me.hgj.jetpackmvvm.demo.app.weight.recyclerview.SpaceItemDecoration
 import me.hgj.jetpackmvvm.demo.data.model.bean.CollectBus
 import me.hgj.jetpackmvvm.demo.databinding.IncludeListBinding
 import me.hgj.jetpackmvvm.demo.ui.adapter.AriticleAdapter
-import me.hgj.jetpackmvvm.demo.viewmodel.request.RequestCollectViewModel
-import me.hgj.jetpackmvvm.demo.viewmodel.request.RequestTreeViewModel
-import me.hgj.jetpackmvvm.demo.viewmodel.state.TreeViewModel
+import me.hgj.jetpackmvvm.demo.vm.request.RequestCollectViewModel
+import me.hgj.jetpackmvvm.demo.vm.request.RequestTreeViewModel
+import me.hgj.jetpackmvvm.demo.vm.state.TreeViewModel
 import me.hgj.jetpackmvvm.ext.nav
 import me.hgj.jetpackmvvm.ext.navigateAction
 
