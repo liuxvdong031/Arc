@@ -5,6 +5,7 @@ import com.franmontiel.persistentcookiejar.cache.SetCookieCache
 import com.franmontiel.persistentcookiejar.persistence.SharedPrefsCookiePersistor
 import com.google.gson.GsonBuilder
 import me.hgj.jetpackmvvm.base.appContext
+import me.hgj.jetpackmvvm.music.MusicApiService
 import me.hgj.jetpackmvvm.network.BaseNetworkApi
 import me.hgj.jetpackmvvm.network.interceptor.CacheInterceptor
 import me.hgj.jetpackmvvm.network.interceptor.logging.LogInterceptor
@@ -26,6 +27,10 @@ import java.util.concurrent.TimeUnit
 //双重校验锁式-单例 封装NetApiService 方便直接快速调用简单的接口
 val apiService: ApiService by lazy(mode = LazyThreadSafetyMode.SYNCHRONIZED) {
     NetworkApi.INSTANCE.getApi(ApiService::class.java, ApiService.SERVER_URL)
+}
+//双重校验锁式-单例 封装NetApiService 方便直接快速调用简单的接口
+val musicApiService: MusicApiService by lazy(mode = LazyThreadSafetyMode.SYNCHRONIZED) {
+    NetworkApi.INSTANCE.getApi(MusicApiService::class.java, MusicApiService.SERVER_URL)
 }
 
 class NetworkApi : BaseNetworkApi() {

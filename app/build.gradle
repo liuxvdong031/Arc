@@ -29,9 +29,9 @@ android {
     }
 
     //使用Kotlin实验特性
-    androidExtensions {
-        experimental = true
-    }
+//    androidExtensions {
+//        experimental = true
+//    }
 
     buildTypes {
         debug {

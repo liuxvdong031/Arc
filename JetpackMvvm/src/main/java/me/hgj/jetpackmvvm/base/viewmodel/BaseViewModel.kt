@@ -44,8 +44,8 @@ open class BaseViewModel : ViewModel() {
     open fun startActivity(clz: Class<*>, bundle: Bundle?) {
         val params: MutableMap<String, Any> = java.util.HashMap()
         params[CLASS] = clz
-        if (bundle != null) {
-            params[BUNDLE] = bundle
+        if (bundle == null) {
+            params[BUNDLE] = Bundle()
         }
         activityChange.startActivity.postValue(params)
     }
